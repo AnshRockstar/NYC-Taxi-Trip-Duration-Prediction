@@ -1,11 +1,9 @@
-<p align="center"> 
-  <img src="https://github.com/AnshRockstar/Netflix-Tv-show-and-Movie-Clustering/blob/main/Web%20App%20images/netflix-logo-png-2574.png" alt="netflix-logo-png-2574.png" width="80px" height="80px">
-</p>
-<h1 align="center"> NETFLIX MOVIES AND TV SHOWS CLUSTERING </h1>
+
+<h1 align="center"> NYC Taxi Time Prediction </h1>
 <h3 align="center"> AlmaBetter Verfied Project - <a href="https://www.almabetter.com/"> AlmaBetter </a> </h5>
 
 <p align="center"> 
-<img src="https://github.com/AnshRockstar/Netflix-Tv-show-and-Movie-Clustering/blob/main/Web%20App%20images/netflix-netflix-logo.gif" alt="Animated gif" height="382px">
+<img src="" alt="Animated gif" height="382px">
 </p>
 
 <p>I have clustered similar movies and TV Shows available on Netflix taking into account of attributes like Description, Cast, Director, Genre etc of a particular movie/show.</p>
