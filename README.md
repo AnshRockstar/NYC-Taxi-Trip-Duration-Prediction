@@ -13,7 +13,7 @@
 <p>This Project includes 1 colab notebook, 1 technical documentation as well as 1 presentation:</p>
 <h4>Executable Files:</h4>
 <ul>
-  <li><b>NETFLIX MOVIES AND TV SHOWS CLUSTERING.ipynb</b> - Includes all functions required for classification operations.</li>
+  <li><b> NYC Taxi Trip Time Prediction - Capstone Project.ipynb</b> - Includes all functions required for regression operations.</li>
 </ul>
 
 <h4>Output:</h4>
@@ -22,70 +22,63 @@
 </ul>
 <h4>Input Files:</h4>
 <ul>
-  <li><b>NETFLIX MOVIES AND TV SHOWS CLUSTERING.csv</b> - Input dataset having information about different shows/movies available on Netflix.</li>
+  <li><b>NYC Taxi.csv</b> - Input dataset having information about different shows/movies available on Netflix.</li>
 </ul>
 <h4>Data Source:</h4>
-<li><b>https://learn.almabetter.com/courses/take/team-capstone-projects/texts/27395237-netflix-movies-and-tv-shows-clustering.</li>
+<li><b>https://learn.almabetter.com/courses/take/team-capstone-projects/texts/19499882-nyc-taxi-trip-time-prediction.</li>
 <ul>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <h2> :book:Introduction</h2>
-Netflix, the world’s largest on-demand internet streaming media and online DVD movie rental service provider.it Founded August 29, 1997, in Los Gatos, California by Marc and Reed. It has 69 million members in over 60 countries enjoying more than 100 million hours of TV shows and movies per day
-Netflix is the world’s leading internet entertainment service with enjoying TV series, documentaries, and feature films across a wide variety of genres and languages. I was curious to analyze the content released in Netflix platform which led me to create these simple, interactive, and exciting visualizations and find similar groups of people.
+More than 7 billion people exist on earth. With necessities of food, water and shelter there also a key requirement of commutating from one place to other. Rapid advancement in technology in the last two decades leads to adaption of a more efficient way of transportation via internet and app-based transport system. New York city is one of such advanced city with extensive use of transportation via subways, buses and taxi services. New York has more then 10,000 plus taxi and nearly 50% of population doesn’t have a personal vehicle. Due to this facts most people used taxi has a there primary mode of transport and it accounts for more than 100 millions taxi trips per year.
 
 <h2> :book: Problem Statement</h2>
-The goal of this project is to find similarity within groups of people to build a movie recommendation system for users. We are going to analyze a dataset from the Netflix database to explore the characteristics that people share in movies. We have experienced it ourselves or have been in the room, the endless scrolling of selecting what to watch.  Users spend more time deciding what to watch than watching their movie.
+The main objective is to build a predictive model, which could help them in predicting the trip duration of taxi. This would in turn help them in matching the right cabs with the right customers quickly and efficiently.
 
 <h2> :book: Data Summery</h2>
-This dataset consists of tv shows and movies available on Netflix as of 2019. The dataset is collected from Fixable which is a third-party Netflix search engine.
-In 2018, they released an interesting report which shows that the number of TV shows on Netflix has nearly tripled since 2010. The streaming service’s number of movies has decreased by more than 2,000 titles since 2010, while its number of TV shows has nearly tripled. It will be interesting to explore what all other insights can be obtained from the same dataset.
-Integrating this dataset with other external datasets such as IMDB ratings, rotten tomatoes can also provide many interesting findings.
+The dataset is based on the 2016 NYC Yellow Cab trip record data made available in Big Query on Google Cloud Platform.
+The data was originally published by the NYC Taxi and Limousine commission (TLC).
 
-* show_id : Unique ID for every Movie / Tv Show
-* type : Identifier - A Movie or TV Show
-* title : Title of the Movie / Tv Show 
-* director : Director of the Movie
-* cast : Actors involved in the movie / show
-* country : Country where the movie / show was produced
-* date_added : Date it was added on Netflix
-* release_year : Actual Release Year of the movie / show
-* rating : TV Rating of the movie / show
-* duration : Total Duration - in minutes or number of seasons
-* listed_in : Genere
-* description: The Summary description
+•	id - a unique identifier for each trip
+•	vendor_id - a code indicating the provider associated with the trip record
+•	pickup_datetime - date and time when the meter was engaged
+•	dropoff_datetime - date and time when the meter was disengaged
+•	passenger_count - the number of passengers in the vehicle (driver entered value)
+•	pickup_longitude - the longitude where the meter was engaged
+•	pickup_latitude - the latitude where the meter was engaged
+•	dropoff_longitude - the longitude where the meter was disengaged
+•	dropoff_latitude - the latitude where the meter was disengaged
+•	store_and_fwd_flag - This flag indicates whether the trip record was held in vehicle memory before sending to the vendor because the vehicle did not have a         connection to the server - Y=store and forward; N=not a store and forward trip
+•	trip_duration - duration of the trip in seconds
+
+
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-# Dash Web App:
-NetflixRecommender recommends Netflix movies and TV shows based on a user's favourite movie or TV show. It uses a Natural Language Processing (NLP) model and a K-Means Clustering model to make these recommendations. These models use information about movies and TV shows such as their plot descriptions and genres to make suggestions. The motivation behind this project is to develop a deeper understanding of recommender systems. Specifically, thinking about how companies like Netflix and YouTube create algorithms to tailor content based on user interests and behaviour.
-I created a Dash web app that utlizes my model to provide film recommendations based on a user's favourite movie or TV show.
-
-![App](https://github.com/San13deep/NETFLIX-MOVIES-AND-TV-SHOWS-CLUSTERING/blob/6eacd171009b37abffa5992fe32c2bfc45384043/Images/App.png)
-
 # Exploring Solutions:
 Having a deeper understanding of what problem we are trying to solve, what the users’ needs, and frustrations are, and what the goals are for achieving the best possible solution for both for the business as well as the user, I began by listing out the possible solutions that were arrived from the research.
-1. Improve rating system: Use the star rating rather than a thumbs up and thumbs down rating system to help guide in decision making when selecting a film.
-2. Separate recently watched: Hide the movies and TV-Shows on a separate page so users don’t have to scroll through those already seen. — users have to do more searching
-3. Randomize a Movie: When users are unsure of what to choose, Netflix will randomly select something to watch based on their viewing history.
-4. Show popular/trending films: Create a category which showcases only trending content.
-5. Connect with Friends: It was proven that users watch shows and movies based on friend recommendations so this may be useful for keeping users locked into Netflix for longer.
-6. Organizing films by the mood: Alongside the genres filter, it may be possible to organize content based on the mood that is experienced after watching the film.
+
 
 # Steps involved:
-The full code for this article can be found here. It is implemented in Python and different clustering algorithms are used. Below is a brief description of the general approach that I employed:
-* Data cleaning and pre-processing: 
-Here I checked and dealt with missing and duplicate variables from the data set as these can grossly affect the performance of different machine learning algorithms (many algorithms do not tolerate missing data).
+The full code for this article can be found here. It is implemented in Python and different machine learning algorithms are used. Below is a brief description of the general approach that I employed:
+* Data Loading and general checkups: 
+We have loaded the data from the given csv files using a function from pandas library. Then we checked the general information about data
 * Exploratory Data Analysis: 
-Here I wanted to gain important statistical insights from the data and the things that I checked for were the distributions of the different attributes, correlations of the attributes with each other and the target variable and I calculated important odds and proportions for the categorical attributes.
-* Clustering:
-Clustering or cluster analysis is a machine learning technique, which groups the unlabelled dataset. It can be defined as "A way of grouping the data points into different clusters, consisting of similar data points. The objects with the possible similarities remain in a group that has less or no similarities with another group."
-It does it by finding some similar patterns in the unlabelled dataset such as shape, size, colour, behaviour, etc., and divides them as per the presence and absence of those similar patterns. 
-It is an unsupervised learning method; hence no supervision is provided to the algorithm, and it deals with the unlabeled dataset. After applying this clustering technique, each cluster or group is provided with a cluster-ID. ML systems can use this id to simplify the processing of large and complex datasets.
+We removed id variable as it doesn’t give much interpretation. We then calculated the distance based on haversine formula from pickup and drop-off latitude and longitude. Then we plotted the box plot for the variable and observed there are many outlier so we segregate this variable and see that most of the trip are within 10km, some trip are within 50km while a very few trip crosses 50km. so we eliminate trip with 0 and above 50km distance.
+We then checked for categorical variable store_and_fwd_flag and passenger_count. We observed the store and fwd. flag contain majority of one category. So we drop this feature. Passenger count variable has entries from 0 to 9. Since there is no trips with 0 passenger either this a miss entry or the driver forgot to enter passenger count of that trip. Also in a taxi maximum six person are allowed to sit including minor. So we eliminate 0 and 7-9 records from our dataset.
+
+*Linear Regression:
+Linear Regression is a regression of dependent variable on independent variable. It is a linear model that assumes a linear relationship between dependent (y) and independent variables (x). 
+
+*XGBoost:
+XGBoost comes under boosting and is known as extra gradient boosting. GBM first calculates the model using X and Y then after the prediction is obtain. It will again calculates the model based on residual of previous model, here loss function will give more weightage to error of previous model. 
+
+*LightGBM:
+Light GBM is based on decision tree algorithm. But it splits the tree leaf wise rather then level wise like other boosting algorithm. So when growing on the same leaf in Light GBM, the leaf-wise algorithm can reduce more loss than the level-wise algorithm and hence results in much better accuracy which can rarely be achieved by any of the existing boosting algorithms.
 
 # Conclusion
-In conclusion, tailored recommendations can be made based on information about movies and TV shows. In addition, similar models can be developed to provide valuable recommendations to consumers in other domains.
-It will solve for improved movie and TV-Show selection times with a considerable growth in satisfaction of the content being consumed leading to more user engagement and greater trust in Netflix recommendations.
+In this project we covered various aspects of the Machine learning development cycle. We observed that the data exploration and variable analysis is a very important aspect of the whole cycle and should be done for thorough understanding of the data. We also cleaned the data while exploring as there were some outliers which should be treated before feature engineering. Further we did feature engineering to filter and gather only the optimal features which are more significant and covered most of the variance in the dataset. Then finally we trained the models on the optimum featureset to get the results.
 
 
 [![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ansh-bhatnagar-093609117/)
